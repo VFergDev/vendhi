@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <script src="script.js" defer></script>
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="brand">VendHi</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="eval.html">Location Evaluation</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home reduce-margin">
+      <video
+        src="./media/4.mp4"
+        class="video-slide active"
+        muted
+        loop
+        autoplay
+      ></video>
+      <div id="reduce-margin" class="content active">
+        <h2 id="reduce-margin">Contact <span>Us</span></h2>
+        
+        <p>
+          Tell us about your potential location for our vending
+          machine(s).
+        </p>
+
+        <form
+          action="process-form.php"
+          method="post"
+          enctype="multipart/form-data"
+          id="reduce-margin"
+        >
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  required>
+        <small>Format: xxx-xxx-xxxx</small>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+      
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Submit Evaluation</button>
+        </form>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <script src="script.js" defer></script>
+    <title>Free Location Evaluation</title>
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style> -->
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="brand">VendHi</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="eval.html">Location Evaluation</a>
+            <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home reduce-margin">
+      <video
+        src="./media/2.mp4"
+        class="video-slide active"
+        muted
+        loop
+        autoplay
+      ></video>
+      <div id="reduce-margin" class="content active">
+        <h2 id="reduce-margin">Location <span>Evaluation Form</span></h2>
+        
+        <p>
+          Tell us about your potential location for our vending
+          machine(s).
+        </p>
+
+        <form
+          action="process-form.php"
+          method="post"
+          enctype="multipart/form-data"
+          id="reduce-margin"
+        >
+          <label for="locationName">Location Name:</label>
+          <input type="text" id="locationName" name="locationName" required />
+
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" required placeholder="#, Street, City, State, Zip-code"/>
+
+          <label for="footTraffic">Estimated Foot Traffic:</label>
+          <input type="number" id="footTraffic" name="footTraffic" required placeholder="How much traffic does the location get weekly"/>
+
+          <div class="inline-group">
+          <div class="">
+            <label for="proximityToEntrance">Proximity to Entrance/Exit:</label>
+            <select
+              id="proximityToEntrance"
+              name="proximityToEntrance"
+              required
+            >
+              <option value="">Select One</option>
+              <option value="close">Close</option>
+              <option value="moderate">Moderate</option>
+              <option value="far">Far</option>
+            </select>
+          </div>
+
+            <div class="">
+              <label for="accessToPower">Access to Power</label>
+              <select
+                id="proximityToEntrance"
+                name="proximityToEntrance"
+                required
+              >
+                <option value="">Select One</option>
+                <option value="close">0-3ft</option>
+                <option value="moderate">4-10ft</option>
+                <option value="far">over 10ft</option>
+              </select>
+            </div>
+
+            <div class="inline-group">
+              <label>Placement:</label>
+              <label
+                ><input type="radio" name="placement" value="inside" required />
+                Inside</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="placement"
+                  value="outside"
+                  required
+                />
+                Outside</label
+              >
+            </div>
+          </div>
+
+          <label for="employeeConcentration"
+            >Traffic Concentration Areas:</label
+          >
+          <textarea
+            id="employeeConcentration"
+            name="employeeConcentration"
+            rows="4"
+            required
+            placeholder="i.e. Lobby, Break-room, Cafeteria, etc."
+          ></textarea>
+
+          <label for="description">Location Description:</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            required
+            placeholder="i.e. Outside, 3ft access to power"
+          ></textarea>
+
+          <label for="photos">Upload up to 3 Photos:</label>
+          <input
+            type="file"
+            id="photos"
+            name="photos[]"
+            accept="image/*"
+            multiple
+            required
+          />
+
+          <button type="submit">Submit Evaluation</button>
+        </form>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+  </body>
+</html>
